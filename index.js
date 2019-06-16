@@ -13,12 +13,12 @@ bot.on('message', message => {
      dispatcher.on("end", end => {
        setTimeout(function(){
           voiceChannel.leave()
-          }, 2000);
-       });
+          }, 500);       });
    }).catch(err => console.log(err));
    isReady = true;
   }
 });
+
 
 
 bot.login(process.env.BOT_TOKEN);
