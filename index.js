@@ -11,13 +11,13 @@ bot.on('message', message => {
   {
      const dispatcher = connection.playFile('./OOF.mp3');
      dispatcher.on("end", end => {
-       setTimeout(function(){
-          voiceChannel.leave()
-          }, 500);       });
+       voiceChannel.leave();
+       });
    }).catch(err => console.log(err));
    isReady = true;
   }
 });
+
 
 
 
